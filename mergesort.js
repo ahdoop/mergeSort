@@ -1,3 +1,4 @@
+/*Merge two sorted arrays into one sorted array*/
 function merge(arr1, arr2){
 	let result = [];
 	let i = 0;
@@ -20,4 +21,13 @@ function merge(arr1, arr2){
 		j++;
 	}
     return result;
+}
+
+/*recursive mergeSort function using merge*/
+function mergeSort(arr) {
+	if(arr.length <= 1) return arr;
+	let middle = Math.floor(arr.length/2);
+	let left = mergeSort(arr.slice(0, middle));
+	let right = mergeSort(arr.slice(middle));
+	return merge(left, right);
 }
