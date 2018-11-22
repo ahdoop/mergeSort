@@ -23,7 +23,7 @@ function merge(arr1, arr2){
     return result;
 }
 
-/*recursive mergeSort function using merge*/
+/*Recursive mergeSort function using merge; returns a sorted array*/
 function mergeSort(arr) {
 	if(arr.length <= 1) return arr;
 	let middle = Math.floor(arr.length/2);
